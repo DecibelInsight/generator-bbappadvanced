@@ -1,0 +1,18 @@
+{
+    "name": "<%= _.capitalize(appName) %>",
+    "version": "0.0.0",
+    "dependencies": {
+        "almond": "latest",
+        "backbone": "1.0.0",
+        "backbone.marionette": "1.0",
+        "backbone.paginator": "0.8.x",
+        "bootstrap": "3.0.x",
+        "jquery": "2.0.3",
+        "handlebars": "1.0",
+        "lodash": "0.10.x",
+        "requirejs": "2.1.8",
+        "hbs": "0.4.0",
+        "json2": "latest",
+        "jasmine" : "latest"
+    }
+}

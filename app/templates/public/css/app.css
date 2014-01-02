@@ -1,0 +1,130 @@
+
+html, body {
+    height: 100%;
+}
+body {
+    margin: 1em 0;
+}
+
+/* Sign in Form */
+
+    .form-signin {
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+    .form-signin .form-signin-heading,
+    .form-signin .checkbox {
+        margin-bottom: 10px;
+    }
+    .form-signin .checkbox {
+        font-weight: normal;
+    }
+    .form-signin .form-control {
+        position: relative;
+        font-size: 16px;
+        height: auto;
+        padding: 10px;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+    .form-signin .form-control:focus {
+        z-index: 2;
+    }
+    .form-signin input[type="text"] {
+        margin-bottom: -1px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+/* Layouts */
+.filter-layout-main {
+    height: 100%;
+    position: relative;
+}
+
+
+/* Stack View */
+
+/*
+ * Required Stack Styles.
+ *
+ * You must provide a container that flows to the
+ * correct size for the stacked content. This will
+ * force the stacks wrapper, and each stack item, 
+ * to fill the container.
+ */
+.stacks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.stacks .stack-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* supposedly this 1st line fixes the css3 
+     * animation flicker. It seems to work in webkit.
+     * placing this on the parent .stacks also removed
+     * the flicker, but it caused a very slight pause
+     * in the animation if 2 or more items were animating
+     * at the same time.
+     */
+    transform: translate3d(0,0,0);
+}
+/* End Required Stack Styles */
+
+/*
+ * Animations to transition stack items in/out.
+ *
+ * Use these exactly as is, or provide your own and
+ * set the following StackView options as needed:
+ * - `inTransitionClass`
+ * - `outTransitionClass`
+ * - `transitionDelay`
+ */
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.slideInFromRight {
+    animation-name: slideInFromRight;
+}
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.slideOutToRight {
+    animation-name: slideOutToRight;
+}
+
+/* End Animations */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
