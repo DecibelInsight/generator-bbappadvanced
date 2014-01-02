@@ -37,7 +37,7 @@ Install [Bower](https://github.com/bower/bower)
 
 Install the Generator
 
-    npm install -g https://xxxxx.xx/xx/xx
+    npm install -g https://github.com/mgmilcher/generator-bbappadvanced/archive/master.tar.gz
 
 Make a new directory, and `cd` into it:
 
